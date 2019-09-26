@@ -1,0 +1,29 @@
+{%
+  set classes = [
+    'paragraph',
+    'carousel',
+    'slide',
+    'carousel-multi-item',
+    'carousel-multi-item-2',
+    'portfolio_content',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+<!--Carousel Wrapper-->
+<div{{ attributes.addClass(classes) }} id="multi-item-example" data-ride="carousel">
+
+
+  <!--Controls-->
+  
+  <!--/.Controls-->
+    {% block content %}
+ 
+    {{ content }}
+
+    {% endblock %}
+
+    </div>
+{% endblock paragraph %}

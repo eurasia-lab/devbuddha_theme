@@ -1,0 +1,12 @@
+webabond-libs:
+  version: VERSION
+  css:
+    base:
+      dist/style.css: {}
+  js:
+    app/js/bootstrap.min.js: {}
+    app/js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.ui.effects.core
+      
